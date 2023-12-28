@@ -18,11 +18,10 @@ export default function ChatComponent() {
     };
     return date.toLocaleDateString('en-US', options);
   };
-  console.log('messages', messages);
 
   return (
-    <main className="mx-auto mt-2 w-full h-screen max-w-xl p-8 flex flex-col bg-gray-50 rounded-lg shadow-lg">
-      <section className="flex-grow mb-4 overflow-auto">
+    <main className="mx-auto mt-80 w-full max-w-xl p-8 flex flex-col bg-gray-100 rounded-lg shadow-lg">
+      <section className="flex-grow mb-4 overflow-auto h-96">
         {messages.map((m) => (
           <div className="flex mb-4" key={m.id}>
             <div

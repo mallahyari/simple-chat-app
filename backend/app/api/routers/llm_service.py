@@ -9,6 +9,7 @@ from litellm import completion
 llm_router = r = APIRouter()
 
 
+
 @r.post("/ask")
 async def generate_answer(user_chat: ChatConversation):
     messages = build_messages(user_chat.messages)
@@ -17,7 +18,7 @@ async def generate_answer(user_chat: ChatConversation):
     
 
     response = completion(
-        model="ollama/vicuna", 
+        model="ollama/vicuna",
         messages=messages, 
         stream=True
     )

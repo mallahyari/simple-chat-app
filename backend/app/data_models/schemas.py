@@ -10,9 +10,4 @@ class ChatConversation(BaseModel):
     messages: List[Message]
     
 
-class UserInput(BaseModel):
-    question: str
-    
-
-
 
